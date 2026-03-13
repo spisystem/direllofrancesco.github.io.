@@ -236,6 +236,16 @@
       </div>
     </div>
   </nav>
+  <div class="category closed" id="rosticceria">
+  <div class="category-header" onclick="toggleCategory(this)">
+    <h2 id="rosticceria-title">Rosticceria</h2>
+    <span class="category-toggle">⌄</span>
+  </div>
+  <ul class="products" id="rosticceria-products">
+    <li><span data-key="ruota_focaccia">Ruota Focaccia</span><span>€5.00</span></li> <!-- Modificato il panzerotto con la ruota focaccia -->
+    <li><span data-key="arancino">Arancino</span><span>€2.00</span></li>
+  </ul>
+</div>
 
   <div class="menu">
    <!-- Panzerotti -->
@@ -249,19 +259,17 @@
     <li><span data-key="panzerotto_gorgonzola">Panzerotto farcito con gorgonzola</span><span>€2.00</span></li>
   </ul>
 </div>
-
-    <!-- Cornetti -->
-    <div class="category closed" id="cornetti">
-      <div class="category-header" onclick="toggleCategory(this)">
-        <h2 id="cornetti-title">Cornetti</h2>
-        <span class="category-toggle">⌄</span>
-      </div>
-      <ul class="products" id="cornetti-products">
-        <li><span data-key="cornetto_classico">Cornetto Classico</span><span>€1.00</span></li>
-        <li><span data-key="cornetto_cioccolato">Cornetto al Cioccolato</span><span>€1.50</span></li>
-      </ul>
-    </div>
-
+ Panzerotti Speciali - Modificati i prodotti -->
+<div class="category closed" id="panzerotti-speciali">
+  <div class="category-header" onclick="toggleCategory(this)">
+    <h2 id="panzerotti-speciali-title">Panzerotti Speciali</h2>
+    <span class="category-toggle">⌄</span>
+  </div>
+  <ul class="products" id="panzerotti-speciali-products">
+    <li><span data-key="panzerotto_cacio_pepe">Panzerotto Cacio e Pepe</span><span>€3.00</span></li>
+    <li><span data-key="panzerotto_braciola">Panzerotto Braciola</span><span>€3.00</span></li>
+  </ul>
+</div>
     <!-- Bevande -->
     <div class="category closed" id="bevande">
       <div class="category-header" onclick="toggleCategory(this)">
@@ -285,18 +293,6 @@
         <li><span data-key="vino">Vino</span><span>€4.00</span></li>
       </ul>
     </div>
-
-    <!-- Rosticceria -->
-    <div class="category closed" id="rosticceria">
-      <div class="category-header" onclick="toggleCategory(this)">
-        <h2 id="rosticceria-title">Rosticceria</h2>
-        <span class="category-toggle">⌄</span>
-      </div>
-      <ul class="products" id="rosticceria-products">
-        <li><span data-key="panzerotto">Panzerotto</span><span>€2.50</span></li>
-        <li><span data-key="arancino">Arancino</span><span>€2.00</span></li>
-      </ul>
-    </div>
   </div>
 
 <footer>
@@ -315,64 +311,110 @@
       resources: {
         it:{translation:{
           "footer_text":"Contattaci: info@bar.com | Telefono: 123-456-7890",
-         "panzerotti": "Panzerotti","cornetti":"Cornetti","bevande":"Bevande","alcolici":"Alcolici","rosticceria":"Rosticceria",
-       "panzerotto_mozzarella_pomodoro": "Panzerotto, mozzarella e pomodoro",
-"panzerotto_gorgonzola": "Panzerotto farcito con gorgonzola",
-          "cornetto_classico":"Cornetto Classico","cornetto_cioccolato":"Cornetto al Cioccolato",
-          "cocacola":"Coca-Cola","acqua":"Acqua",
-          "birra":"Birra","vino":"Vino",
-          "panzerotto":"Panzerotto","arancino":"Arancino"
-        }},
+          it: {
+  translation: {
+    "footer_text": "Contattaci: info@bar.com | Telefono: 123-456-7890",
+    "rosticceria": "Rosticceria",
+    "panzerotti": "Panzerotti",
+    "panzerotti_speciali": "Panzerotti Speciali",
+    "bevande": "Bevande",
+    "alcolici": "Alcolici",   "panzerotto_mozzarella_pomodoro": "Panzerotto, mozzarella e pomodoro",
+    "panzerotto_gorgonzola": "Panzerotto farcito con gorgonzola",
+    "panzerotto_cacio_pepe": "Panzerotto cacio e pepe",
+    "panzerotto_braciola": "Panzerotto braciola* - Tipica Braciola di carne barese",
+    "ruota_focaccia": "Ruota di focaccia",
+    "cocacola": "Coca-Cola",
+    "acqua": "Acqua",
+    "birra": "Birra",
+    "vino": "Vino",
+    "arancino": "Arancino"
+   }},
         en:{translation:{
           "footer_text":"Contact us: info@bar.com | Phone: 123-456-7890",
-            "panzerotti": "Panzerotti","cornetti":"Croissants","bevande":"Drinks","alcolici":"Alcohol","rosticceria":"Snacks",
-          "panzerotto_mozzarella_pomodoro": "Panzerotto, mozzarella and tomato",
-      "panzerotto_gorgonzola": "Panzerotto stuffed with gorgonzola",
-          "cornetto_classico":"Classic Croissant","cornetto_cioccolato":"Chocolate Croissant",
-          "cocacola":"Coca-Cola","acqua":"Water",
-          "birra":"Beer","vino":"Wine",
-          "panzerotto":"Panzerotto","arancino":"Arancino"
+            "rosticceria": "Savoury Snack",  // Cambiato da "Snacks" a "Savoury Snack"
+    "panzerotti": "Panzerotti",
+    "panzerotti_speciali": "Special Panzerotti",
+    "bevande": "Drinks",
+    "alcolici": "Alcohol",
+        "panzerotto_mozzarella_pomodoro": "Panzerotto, mozzarella and tomato",
+    "panzerotto_gorgonzola": "Panzerotto stuffed with gorgonzola",
+    "panzerotto_cacio_pepe": "Panzerotto cacio e pepe",
+    "panzerotto_braciola": "Panzerotto braciola* - Typical Bari Meat Roll",
+    "ruota_focaccia": "Focaccia Wheel",
+    "cocacola": "Coca-Cola",
+    "acqua": "Water",
+    "birra": "Beer",
+    "vino": "Wine",
+    "arancino": "Arancino"
         }},
         es:{translation:{
           "footer_text":"Contáctanos: info@bar.com | Teléfono: 123-456-7890",
-           "panzerotti": "Panzerotti","cornetti":"Croissants","bevande":"Bebidas","alcolici":"Alcohol","rosticceria":"Comida rápida",
-          "panzerotto_mozzarella_pomodoro": "Panzerotto, mozzarella y tomate",
-      "panzerotto_gorgonzola": "Panzerotto relleno con gorgonzola",
-          "cornetto_classico":"Croissant clásico","cornetto_cioccolato":"Croissant de chocolate",
-          "cocacola":"Coca-Cola","acqua":"Agua",
-          "birra":"Cerveza","vino":"Vino",
-          "panzerotto":"Panzerotto","arancino":"Arancino"
+          "rosticceria": "Comida rápida",
+    "panzerotti": "Panzerotti",
+    "panzerotti_speciali": "Panzerotti Especiales",
+    "bevande": "Bebidas",
+    "alcolici": "Alcohol",
+ // Prodotti
+    "panzerotto_mozzarella_pomodoro": "Panzerotto, mozzarella y tomate",
+    "panzerotto_gorgonzola": "Panzerotto relleno con gorgonzola",
+    "panzerotto_cacio_pepe": "Panzerotto cacio e pepe",
+    "panzerotto_braciola": "Panzerotto braciola* - Rollo de carne típico de Bari",
+    "ruota_focaccia": "Rueda de focaccia",
+    "cocacola": "Coca-Cola",
+    "acqua": "Agua",
+    "birra": "Cerveza",
+    "vino": "Vino",
+    "arancino": "Arancino"
         }},
         fr:{translation:{
           "footer_text":"Contactez-nous: info@bar.com | Téléphone: 123-456-7890",
-           "panzerotti": "Panzerotti","cornetti":"Croissants","bevande":"Boissons","alcolici":"Alcool","rosticceria":"Snack",
-          "panzerotto_mozzarella_pomodoro": "Panzerotto, mozzarella et tomate",
-      "panzerotto_gorgonzola": "Panzerotto farci de gorgonzola",
-          "cornetto_classico":"Croissant classique","cornetto_cioccolato":"Croissant au chocolat",
-          "cocacola":"Coca-Cola","acqua":"Eau",
-          "birra":"Bière","vino":"Vin",
-          "panzerotto":"Panzerotto","arancino":"Arancino"
+         "rosticceria": "Snack",
+    "panzerotti": "Panzerotti",
+    "panzerotti_speciali": "Panzerotti Spéciaux",
+    "bevande": "Boissons",
+    "alcolici": "Alcool",
+         / Prodotti
+    "panzerotto_mozzarella_pomodoro": "Panzerotto, mozzarella et tomate",
+    "panzerotto_gorgonzola": "Panzerotto farci de gorgonzola",
+    "panzerotto_cacio_pepe": "Panzerotto cacio e pepe",
+    "panzerotto_braciola": "Panzerotto braciola* - Rôti de viande typique de Bari",
+    "ruota_focaccia": "Roue de focaccia",
+    "cocacola": "Coca-Cola",
+    "acqua": "Eau",
+    "birra": "Bière",
+    "vino": "Vin",
+    "arancino": "Arancino"
         }},
         de:{translation:{
           "footer_text":"Kontaktieren Sie uns: info@bar.com | Telefon: 123-456-7890",
-         "panzerotti": "Panzerotti","cornetti":"Croissants","bevande":"Getränke","alcolici":"Alkohol","rosticceria":"Snacks",
-          "panzerotto_mozzarella_pomodoro": "Panzerotto, Mozzarella und Tomaten",
-      "panzerotto_gorgonzola": "Panzerotto gefüllt mit Gorgonzola",
-          "cornetto_classico":"Klassisches Croissant","cornetto_cioccolato":"Schokoladen-Croissant",
-          "cocacola":"Coca-Cola","acqua":"Wasser",
-          "birra":"Bier","vino":"Wein",
-          "panzerotto":"Panzerotto","arancino":"Arancino"
+         "rosticceria": "Snacks",
+    "panzerotti": "Panzerotti",
+    "panzerotti_speciali": "Spezielle Panzerotti",
+    "bevande": "Getränke",
+    "alcolici": "Alkohol",
+          // Prodotti
+    "panzerotto_mozzarella_pomodoro": "Panzerotto, Mozzarella und Tomaten",
+    "panzerotto_gorgonzola": "Panzerotto gefüllt mit Gorgonzola",
+    "panzerotto_cacio_pepe": "Panzerotto cacio e pepe",
+    "panzerotto_braciola": "Panzerotto braciola* - Typisches Bari Fleischgericht",
+    "ruota_focaccia": "Focaccia Rad",
+    "cocacola": "Coca-Cola",
+    "acqua": "Wasser",
+    "birra": "Bier",
+    "vino": "Wein",
+    "arancino": "Arancino"
         }}
       }
     });
 
-    function updateTexts(){
-      // Categorie
-      document.querySelector('#panzerotti-title').textContent = i18next.t('panzerotti');
-      document.querySelector('#cornetti-title').textContent = i18next.t('cornetti');
-      document.querySelector('#bevande-title').textContent = i18next.t('bevande');
-      document.querySelector('#alcolici-title').textContent = i18next.t('alcolici');
-      document.querySelector('#rosticceria-title').textContent = i18next.t('rosticceria');
+   function updateTexts(){
+  // Categorie
+  document.querySelector('#rosticceria-title').textContent = i18next.t('rosticceria');
+  document.querySelector('#panzerotti-title').textContent = i18next.t('panzerotti');
+  document.querySelector('#panzerotti_speciali-title').textContent = i18next.t('panzerotti_speciali'); // Corretto
+  document.querySelector('#bevande-title').textContent = i18next.t('bevande');
+  document.querySelector('#alcolici-title').textContent = i18next.t('alcolici');
+}
 
       // Prodotti
       document.querySelectorAll('[data-key]').forEach(el=>{
