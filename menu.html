@@ -210,12 +210,12 @@
       .products li span:last-child { margin-top: 5px; }
     }
     .footer-line {
-  border: 0;
-  height: 1px;
-  background: linear-gradient(to right, transparent, #c6a75e, transparent);
-  margin: 0 20px 15px;
-  opacity: 0.7;
-}
+      border: 0;
+      height: 1px;
+      background: linear-gradient(to right, transparent, #c6a75e, transparent);
+      margin: 0 20px 15px;
+      opacity: 0.7;
+    }
   </style>
 </head>
 <body>
@@ -238,28 +238,27 @@
   </nav>
 
   <div class="menu">
-    <!-- Caffetteria -->
-    <div class="category closed" id="caffetteria">
+    <!-- Panzerotti -->
+    <div class="category closed" id="panzerotti">
       <div class="category-header" onclick="toggleCategory(this)">
-        <h2 id="caffetteria-title">Caffetteria</h2>
+        <h2 id="panzerotti-title">Panzerotti</h2>
         <span class="category-toggle">⌄</span>
       </div>
-      <ul class="products" id="caffetteria-products">
-        <li><span data-key="caffe">Caffè</span><span>€1.50</span></li>
-        <li><span data-key="latte">Latte</span><span>€2.00</span></li>
-        <li><span data-key="cappuccino">Cappuccino</span><span>€2.50</span></li>
+      <ul class="products" id="panzerotti-products">
+        <li><span data-key="panzerotto_mozzarella_pomodoro">Panzerotto, mozzarella e pomodoro</span><span>€1.50</span></li>
+                <li><span data-key="panzerotto_gorgonzola">Panzerotto farcito con gorgonzola</span><span>€2.00</span></li>
       </ul>
     </div>
 
-    <!-- Cornetti -->
-    <div class="category closed" id="cornetti">
+    <!-- Panzerotti Speciali -->
+    <div class="category closed" id="panzerotti-speciali">
       <div class="category-header" onclick="toggleCategory(this)">
-        <h2 id="cornetti-title">Cornetti</h2>
+        <h2 id="panzerotti-speciali-title">Panzerotti Speciali</h2>
         <span class="category-toggle">⌄</span>
       </div>
-      <ul class="products" id="cornetti-products">
-        <li><span data-key="cornetto_classico">Cornetto Classico</span><span>€1.00</span></li>
-        <li><span data-key="cornetto_cioccolato">Cornetto al Cioccolato</span><span>€1.50</span></li>
+      <ul class="products" id="panzerotti-speciali-products">
+        <li><span data-key="panzerotto_cacio_pepe">Panzerotto, cacio e pepe</span><span>€3.00</span></li>
+        <li><span data-key="panzerotto_classico">Panzerotto classico</span><span>€3.00</span></li>
       </ul>
     </div>
 
@@ -275,146 +274,145 @@
       </ul>
     </div>
 
-    <!-- Alcolici -->
-    <div class="category closed" id="alcolici">
+    <!-- Birre -->
+    <div class="category closed" id="birre">
       <div class="category-header" onclick="toggleCategory(this)">
-        <h2 id="alcolici-title">Alcolici</h2>
+        <h2 id="birre-title">Birre</h2>
         <span class="category-toggle">⌄</span>
       </div>
-      <ul class="products" id="alcolici-products">
-        <li><span data-key="birra">Birra</span><span>€3.50</span></li>
-        <li><span data-key="vino">Vino</span><span>€4.00</span></li>
+      <ul class="products" id="birre-products">
+        <li><span data-key="peroni">Peroni</span><span>€1.50</span></li>
+        <li><span data-key="heineken">Heineken</span><span>€3.50</span></li>
       </ul>
     </div>
 
-    <!-- Rosticceria -->
-    <div class="category closed" id="rosticceria">
+    <!-- Focaccia -->
+    <div class="category closed" id="focaccia">
       <div class="category-header" onclick="toggleCategory(this)">
-        <h2 id="rosticceria-title">Rosticceria</h2>
+        <h2 id="focaccia-title">Focaccia</h2>
         <span class="category-toggle">⌄</span>
       </div>
-      <ul class="products" id="rosticceria-products">
-        <li><span data-key="panzerotto">Panzerotto</span><span>€2.50</span></li>
-        <li><span data-key="arancino">Arancino</span><span>€2.00</span></li>
+      <ul class="products" id="focaccia-products">
+        <li><span data-key="focaccia">Focaccia</span><span>€5.00</span></li>
       </ul>
     </div>
   </div>
 
-<footer>
-  <hr class="footer-line">
-  <p id="footer-text">
-    SPI System di Giuseppe Spizzico<br>
-    P. IVA: 08791580726
-  </p>
-  <p>&copy; 2026 Demo Menù</p>
-</footer>
+  <footer>
+    <hr class="footer-line">
+    <p id="footer-text">
+      SPI System di Giuseppe Spizzico<br>
+      P. IVA: 08791580726
+    </p>
+    <p>&copy; 2026 Demo Menù</p>
+  </footer>
 
   <script>
     // CONFIG LINGUE
     i18next.init({
       lng: localStorage.getItem('selectedLanguage') || 'it',
       resources: {
-        it:{translation:{
-          "footer_text":"Contattaci: info@bar.com | Telefono: 123-456-7890",
-          "caffetteria":"Caffetteria","cornetti":"Cornetti","bevande":"Bevande","alcolici":"Alcolici","rosticceria":"Rosticceria",
-          "caffe":"Caffè","latte":"Latte","cappuccino":"Cappuccino",
-          "cornetto_classico":"Cornetto Classico","cornetto_cioccolato":"Cornetto al Cioccolato",
-          "cocacola":"Coca-Cola","acqua":"Acqua",
-          "birra":"Birra","vino":"Vino",
-          "panzerotto":"Panzerotto","arancino":"Arancino"
+        it: { translation: {
+          "footer_text": "Contattaci: info@bar.com | Telefono: 123-456-7890",
+          "panzerotti": "Panzerotti",
+          "panzerotto_mozzarella_pomodoro": "Panzerotto, mozzarella e pomodoro",
+          "panzerotto_gorgonzola": "Panzerotto farcito con gorgonzola",
+          "panzerotti_speciali": "Panzerotti Speciali",
+          "panzerotto_cacio_pepe": "Panzerotto, cacio e pepe",
+          "panzerotto_classico": "Panzerotto classico",
+          "bevande": "Bevande",
+          "cocacola": "Coca-Cola",
+          "acqua": "Acqua",
+          "birre": "Birre",
+          "peroni": "Peroni",
+          "heineken": "Heineken",
+          "focaccia": "Focaccia"
         }},
-        en:{translation:{
-          "footer_text":"Contact us: info@bar.com | Phone: 123-456-7890",
-          "caffetteria":"Coffee Shop","cornetti":"Croissants","bevande":"Drinks","alcolici":"Alcohol","rosticceria":"Snacks",
-          "caffe":"Coffee","latte":"Milk","cappuccino":"Cappuccino",
-          "cornetto_classico":"Classic Croissant","cornetto_cioccolato":"Chocolate Croissant",
-          "cocacola":"Coca-Cola","acqua":"Water",
-          "birra":"Beer","vino":"Wine",
-          "panzerotto":"Panzerotto","arancino":"Arancino"
+        en: { translation: {
+          "footer_text": "Contact us: info@bar.com | Phone: 123-456-7890",
+          "panzerotti": "Panzerotti",
+          "panzerotto_mozzarella_pomodoro": "Panzerotto, mozzarella and tomato",
+          "panzerotto_gorgonzola": "Panzerotto stuffed with gorgonzola",
+          "panzerotti_speciali": "Special Panzerotti",
+          "panzerotto_cacio_pepe": "Panzerotto, cheese and pepper",
+          "panzerotto_classico": "Classic Panzerotto",
+          "bevande": "Drinks",
+          "cocacola": "Coca-Cola",
+          "acqua": "Water",
+          "birre": "Beers",
+          "peroni": "Peroni",
+          "heineken": "Heineken",
+          "focaccia": "Focaccia"
         }},
-        es:{translation:{
-          "footer_text":"Contáctanos: info@bar.com | Teléfono: 123-456-7890",
-          "caffetteria":"Cafetería","cornetti":"Croissants","bevande":"Bebidas","alcolici":"Alcohol","rosticceria":"Comida rápida",
-          "caffe":"Café","latte":"Leche","cappuccino":"Capuchino",
-          "cornetto_classico":"Croissant clásico","cornetto_cioccolato":"Croissant de chocolate",
-          "cocacola":"Coca-Cola","acqua":"Agua",
-          "birra":"Cerveza","vino":"Vino",
-          "panzerotto":"Panzerotto","arancino":"Arancino"
+        es: { translation: {
+          "footer_text": "Contáctanos: info@bar.com | Teléfono: 123-456-7890",
+          "panzerotti": "Panzerotti",
+          "panzerotto_mozzarella_pomodoro": "Panzerotto, mozzarella y tomate",
+          "panzerotto_gorgonzola": "Panzerotto relleno con gorgonzola",
+          "panzerotti_speciali": "Panzerotti Especiales",
+          "panzerotto_cacio_pepe": "Panzerotto, queso y pimienta",
+          "panzerotto_classico": "Panzerotto clásico",
+          "bevande": "Bebidas",
+          "cocacola": "Coca-Cola",
+          "acqua": "Agua",
+          "birre": "Cervezas",
+          "peroni": "Peroni",
+          "heineken": "Heineken",
+          "focaccia": "Focaccia"
         }},
-        fr:{translation:{
-          "footer_text":"Contactez-nous: info@bar.com | Téléphone: 123-456-7890",
-          "caffetteria":"Café","cornetti":"Croissants","bevande":"Boissons","alcolici":"Alcool","rosticceria":"Snack",
-          "caffe":"Café","latte":"Lait","cappuccino":"Cappuccino",
-          "cornetto_classico":"Croissant classique","cornetto_cioccolato":"Croissant au chocolat",
-          "cocacola":"Coca-Cola","acqua":"Eau",
-          "birra":"Bière","vino":"Vin",
-          "panzerotto":"Panzerotto","arancino":"Arancino"
+        fr: { translation: {
+          "footer_text": "Contactez-nous: info@bar.com | Téléphone: 123-456-7890",
+          "panzerotti": "Panzerotti",
+          "panzerotto_mozzarella_pomodoro": "Panzerotto, mozzarella et tomate",
+          "panzerotto_gorgonzola": "Panzerotto farci de gorgonzola",
+          "panzerotti_speciali": "Panzerotti spéciaux",
+          "panzerotto_cacio_pepe": "Panzerotto, fromage et poivre",
+          "panzerotto_classico": "Panzerotto classique",
+          "bevande": "Boissons",
+          "cocacola": "Coca-Cola",
+          "acqua": "Eau",
+          "birre": "Bières",
+          "peroni": "Peroni",
+          "heineken": "Heineken",
+          "focaccia": "Focaccia"
         }},
-        de:{translation:{
-          "footer_text":"Kontaktieren Sie uns: info@bar.com | Telefon: 123-456-7890",
-          "caffetteria":"Kaffeehaus","cornetti":"Croissants","bevande":"Getränke","alcolici":"Alkohol","rosticceria":"Snacks",
-          "caffe":"Kaffee","latte":"Milch","cappuccino":"Cappuccino",
-          "cornetto_classico":"Klassisches Croissant","cornetto_cioccolato":"Schokoladen-Croissant",
-          "cocacola":"Coca-Cola","acqua":"Wasser",
-          "birra":"Bier","vino":"Wein",
-          "panzerotto":"Panzerotto","arancino":"Arancino"
+        de: { translation: {
+          "footer_text": "Kontaktieren Sie uns: info@bar.com | Telefon: 123-456-7890",
+          "panzerotti": "Panzerotti",
+          "panzerotto_mozzarella_pomodoro": "Panzerotto, Mozzarella und Tomaten",
+          "panzerotto_gorgonzola": "Panzerotto gefüllt mit Gorgonzola",
+          "panzerotti_speciali": "Spezielle Panzerotti",
+          "panzerotto_cacio_pepe": "Panzerotto, Käse und Pfeffer",
+          "panzerotto_classico": "Klassisches Panzerotto",
+          "bevande": "Getränke",
+          "cocacola": "Coca-Cola",
+          "acqua": "Wasser",
+          "birre": "Biere",
+          "peroni": "Peroni",
+          "heineken": "Heineken",
+          "focaccia": "Focaccia"
         }}
       }
     });
 
     function updateTexts(){
       // Categorie
-      document.querySelector('#caffetteria-title').textContent = i18next.t('caffetteria');
-      document.querySelector('#cornetti-title').textContent = i18next.t('cornetti');
+      document.querySelector('#panzerotti-title').textContent = i18next.t('panzerotti');
+      document.querySelector('#panzerotti-speciali-title').textContent = i18next.t('panzerotti_speciali');
       document.querySelector('#bevande-title').textContent = i18next.t('bevande');
-      document.querySelector('#alcolici-title').textContent = i18next.t('alcolici');
-      document.querySelector('#rosticceria-title').textContent = i18next.t('rosticceria');
+      document.querySelector('#birre-title').textContent = i18next.t('birre');
+      document.querySelector('#focaccia-title').textContent = i18next.t('focaccia');
 
       // Prodotti
-      document.querySelectorAll('[data-key]').forEach(el=>{
+      document.querySelectorAll('[data-key]').forEach(el => {
         const key = el.getAttribute('data-key');
         el.textContent = i18next.t(key);
       });
-      
 
       // Bandiera
       const langSpan = document.querySelector('.language-selector span:first-child');
-      switch(i18next.language){
-        case 'en': langSpan.textContent='🇬🇧'; break;
-        case 'es': langSpan.textContent='🇪🇸'; break;
-        case 'fr': langSpan.textContent='🇫🇷'; break;
-        case 'de': langSpan.textContent='🇩🇪'; break;
-        default: langSpan.textContent='🇮🇹';
-      }
-    }
-
-    const savedLang = localStorage.getItem('selectedLanguage');
-    if(savedLang){ i18next.changeLanguage(savedLang, updateTexts); }
-    else{ updateTexts(); }
-
-    function changeLanguage(event, language){
-      event.preventDefault();
-      localStorage.setItem('selectedLanguage', language);
-      i18next.changeLanguage(language, updateTexts);
-      setTimeout(()=>document.querySelector('.language-dropdown').style.display='none',200);
-    }
-
-    function toggleDropdown(){
-      const dropdown = document.querySelector('.language-dropdown');
-      dropdown.style.display = dropdown.style.display==='block' ? 'none' : 'block';
-    }
-
-    function toggleCategory(element){
-      const category = element.parentElement;
-      if(category.classList.contains('open')){
-        category.classList.remove('open');
-        category.classList.add('closed');
-      } else {
-        category.classList.remove('closed');
-        category.classList.add('open');
-      }
-    }
-  </script>
-
-</body>
-</html>
+      switch(i18next.language) {
+        case 'en': langSpan.textContent = '🇬🇧'; break;
+        case 'es': langSpan.textContent = '🇪🇸'; break;
+        case 'fr': langSpan.textContent = '🇫🇷'; break;
+        case 'de': langSpan.textContent =
