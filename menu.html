@@ -255,7 +255,7 @@
     <span class="category-toggle">⌄</span>
   </div>
   <ul class="products" id="panzerotti-products">
-    <li><span data-key="panzerotto_mozzarella_pomodoro">Panzerotto, mozzarella e pomodoro</span><span>€1.50</span></li>
+    <li><span data-key="panzerotto_mozzarella_pomodoro">Panzerotto mozzarella e pomodoro</span><span>€1.50</span></li>
     <li><span data-key="panzerotto_gorgonzola">Panzerotto farcito con gorgonzola</span><span>€2.00</span></li>
   </ul>
 </div>
@@ -307,9 +307,9 @@
   <script>
     // CONFIG LINGUE
     i18next.init({
-      lng: localStorage.getItem('selectedLanguage') || 'resources: {
-  it: {
-    translation: {
+      lng: localStorage.getItem('selectedLanguage') || 'it',
+  resources: {
+        it:{translation:{
       "footer_text": "Contattaci: info@bar.com | Telefono: 123-456-7890",
       "rosticceria": "Rosticceria",
       "panzerotti": "Panzerotti",
@@ -326,8 +326,7 @@
       "birra": "Birra",
       "vino": "Vino",
       "arancino": "Arancino"
-    }
-  },
+    }},
   en: {
     translation: {
       "footer_text": "Contact us: info@bar.com | Phone: 123-456-7890",
@@ -406,8 +405,9 @@
       "birra": "Bier",
       "vino": "Wein",
       "arancino": "Arancino"
-    }
+    }}
   }
+    });
 
    function updateTexts(){
   // Categorie
@@ -416,7 +416,7 @@
   document.querySelector('#panzerotti_speciali-title').textContent = i18next.t('panzerotti_speciali'); // Corretto
   document.querySelector('#bevande-title').textContent = i18next.t('bevande');
   document.querySelector('#alcolici-title').textContent = i18next.t('alcolici');
-}
+
 
       // Prodotti
       document.querySelectorAll('[data-key]').forEach(el=>{
