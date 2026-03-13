@@ -173,7 +173,10 @@ nav .logo img:hover {
   font-size: 2rem;
   color: #c6a75e;
   margin-bottom: 10px;
-  transform: rotate(180deg);  /* Ruota l'icona di 180 gradi */
+}
+  /* Aggiungi una classe specifica per l'icona del telefono */
+.phone-icon {
+  transform: scaleX(-1);  /* Inverte l'icona orizzontalmente */
 }
 
 .info-box h3 {
@@ -282,7 +285,7 @@ footer, #footer-text {
     <p id="hours-text">Martedì - Domenica: 19:00 - 01:00<br>Lunedì chiuso</p>
   </div>
  <div class="info-box" id="contact-box">
-  <i class="fas fa-phone-alt"></i>
+<i class="fas fa-phone-alt phone-icon"></i>
   <h3 id="contact-title">Contatti</h3>
  <p id="contact-text">Telefono: 334 2732997</p>
   </p>
