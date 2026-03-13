@@ -307,105 +307,107 @@
   <script>
     // CONFIG LINGUE
     i18next.init({
-      lng: localStorage.getItem('selectedLanguage') || 'it',
-      resources: {
-        it:{translation:{
-          "footer_text":"Contattaci: info@bar.com | Telefono: 123-456-7890",
-          it: {
-  translation: {
-    "footer_text": "Contattaci: info@bar.com | Telefono: 123-456-7890",
-    "rosticceria": "Rosticceria",
-    "panzerotti": "Panzerotti",
-    "panzerotti_speciali": "Panzerotti Speciali",
-    "bevande": "Bevande",
-    "alcolici": "Alcolici",   "panzerotto_mozzarella_pomodoro": "Panzerotto, mozzarella e pomodoro",
-    "panzerotto_gorgonzola": "Panzerotto farcito con gorgonzola",
-    "panzerotto_cacio_pepe": "Panzerotto cacio e pepe",
-    "panzerotto_braciola": "Panzerotto braciola* - Tipica Braciola di carne barese",
-    "ruota_focaccia": "Ruota di focaccia",
-    "cocacola": "Coca-Cola",
-    "acqua": "Acqua",
-    "birra": "Birra",
-    "vino": "Vino",
-    "arancino": "Arancino"
-   }},
-        en:{translation:{
-          "footer_text":"Contact us: info@bar.com | Phone: 123-456-7890",
-            "rosticceria": "Savoury Snack",  // Cambiato da "Snacks" a "Savoury Snack"
-    "panzerotti": "Panzerotti",
-    "panzerotti_speciali": "Special Panzerotti",
-    "bevande": "Drinks",
-    "alcolici": "Alcohol",
-        "panzerotto_mozzarella_pomodoro": "Panzerotto, mozzarella and tomato",
-    "panzerotto_gorgonzola": "Panzerotto stuffed with gorgonzola",
-    "panzerotto_cacio_pepe": "Panzerotto cacio e pepe",
-    "panzerotto_braciola": "Panzerotto braciola* - Typical Bari Meat Roll",
-    "ruota_focaccia": "Focaccia Wheel",
-    "cocacola": "Coca-Cola",
-    "acqua": "Water",
-    "birra": "Beer",
-    "vino": "Wine",
-    "arancino": "Arancino"
-        }},
-        es:{translation:{
-          "footer_text":"Contáctanos: info@bar.com | Teléfono: 123-456-7890",
-          "rosticceria": "Comida rápida",
-    "panzerotti": "Panzerotti",
-    "panzerotti_speciali": "Panzerotti Especiales",
-    "bevande": "Bebidas",
-    "alcolici": "Alcohol",
- // Prodotti
-    "panzerotto_mozzarella_pomodoro": "Panzerotto, mozzarella y tomate",
-    "panzerotto_gorgonzola": "Panzerotto relleno con gorgonzola",
-    "panzerotto_cacio_pepe": "Panzerotto cacio e pepe",
-    "panzerotto_braciola": "Panzerotto braciola* - Rollo de carne típico de Bari",
-    "ruota_focaccia": "Rueda de focaccia",
-    "cocacola": "Coca-Cola",
-    "acqua": "Agua",
-    "birra": "Cerveza",
-    "vino": "Vino",
-    "arancino": "Arancino"
-        }},
-        fr:{translation:{
-          "footer_text":"Contactez-nous: info@bar.com | Téléphone: 123-456-7890",
-         "rosticceria": "Snack",
-    "panzerotti": "Panzerotti",
-    "panzerotti_speciali": "Panzerotti Spéciaux",
-    "bevande": "Boissons",
-    "alcolici": "Alcool",
-         / Prodotti
-    "panzerotto_mozzarella_pomodoro": "Panzerotto, mozzarella et tomate",
-    "panzerotto_gorgonzola": "Panzerotto farci de gorgonzola",
-    "panzerotto_cacio_pepe": "Panzerotto cacio e pepe",
-    "panzerotto_braciola": "Panzerotto braciola* - Rôti de viande typique de Bari",
-    "ruota_focaccia": "Roue de focaccia",
-    "cocacola": "Coca-Cola",
-    "acqua": "Eau",
-    "birra": "Bière",
-    "vino": "Vin",
-    "arancino": "Arancino"
-        }},
-        de:{translation:{
-          "footer_text":"Kontaktieren Sie uns: info@bar.com | Telefon: 123-456-7890",
-         "rosticceria": "Snacks",
-    "panzerotti": "Panzerotti",
-    "panzerotti_speciali": "Spezielle Panzerotti",
-    "bevande": "Getränke",
-    "alcolici": "Alkohol",
-          // Prodotti
-    "panzerotto_mozzarella_pomodoro": "Panzerotto, Mozzarella und Tomaten",
-    "panzerotto_gorgonzola": "Panzerotto gefüllt mit Gorgonzola",
-    "panzerotto_cacio_pepe": "Panzerotto cacio e pepe",
-    "panzerotto_braciola": "Panzerotto braciola* - Typisches Bari Fleischgericht",
-    "ruota_focaccia": "Focaccia Rad",
-    "cocacola": "Coca-Cola",
-    "acqua": "Wasser",
-    "birra": "Bier",
-    "vino": "Wein",
-    "arancino": "Arancino"
-        }}
-      }
-    });
+      lng: localStorage.getItem('selectedLanguage') || 'resources: {
+  it: {
+    translation: {
+      "footer_text": "Contattaci: info@bar.com | Telefono: 123-456-7890",
+      "rosticceria": "Rosticceria",
+      "panzerotti": "Panzerotti",
+      "panzerotti_speciali": "Panzerotti Speciali",
+      "bevande": "Bevande",
+      "alcolici": "Alcolici",
+      "panzerotto_mozzarella_pomodoro": "Panzerotto, mozzarella e pomodoro",
+      "panzerotto_gorgonzola": "Panzerotto farcito con gorgonzola",
+      "panzerotto_cacio_pepe": "Panzerotto cacio e pepe",
+      "panzerotto_braciola": "Panzerotto braciola* - Tipica Braciola di carne barese",
+      "ruota_focaccia": "Ruota di focaccia",
+      "cocacola": "Coca-Cola",
+      "acqua": "Acqua",
+      "birra": "Birra",
+      "vino": "Vino",
+      "arancino": "Arancino"
+    }
+  },
+  en: {
+    translation: {
+      "footer_text": "Contact us: info@bar.com | Phone: 123-456-7890",
+      "rosticceria": "Savoury Snack",  // Cambiato da "Snacks" a "Savoury Snack"
+      "panzerotti": "Panzerotti",
+      "panzerotti_speciali": "Special Panzerotti",
+      "bevande": "Drinks",
+      "alcolici": "Alcohol",
+      "panzerotto_mozzarella_pomodoro": "Panzerotto, mozzarella and tomato",
+      "panzerotto_gorgonzola": "Panzerotto stuffed with gorgonzola",
+      "panzerotto_cacio_pepe": "Panzerotto cacio e pepe",
+      "panzerotto_braciola": "Panzerotto braciola* - Typical Bari Meat Roll",
+      "ruota_focaccia": "Focaccia Wheel",
+      "cocacola": "Coca-Cola",
+      "acqua": "Water",
+      "birra": "Beer",
+      "vino": "Wine",
+      "arancino": "Arancino"
+    }
+  },
+  es: {
+    translation: {
+      "footer_text": "Contáctanos: info@bar.com | Teléfono: 123-456-7890",
+      "rosticceria": "Comida rápida",
+      "panzerotti": "Panzerotti",
+      "panzerotti_speciali": "Panzerotti Especiales",
+      "bevande": "Bebidas",
+      "alcolici": "Alcohol",
+      "panzerotto_mozzarella_pomodoro": "Panzerotto, mozzarella y tomate",
+      "panzerotto_gorgonzola": "Panzerotto relleno con gorgonzola",
+      "panzerotto_cacio_pepe": "Panzerotto cacio e pepe",
+      "panzerotto_braciola": "Panzerotto braciola* - Rollo de carne típico de Bari",
+      "ruota_focaccia": "Rueda de focaccia",
+      "cocacola": "Coca-Cola",
+      "acqua": "Agua",
+      "birra": "Cerveza",
+      "vino": "Vino",
+      "arancino": "Arancino"
+    }
+  },
+  fr: {
+    translation: {
+      "footer_text": "Contactez-nous: info@bar.com | Téléphone: 123-456-7890",
+      "rosticceria": "Snack",
+      "panzerotti": "Panzerotti",
+      "panzerotti_speciali": "Panzerotti Spéciaux",
+      "bevande": "Boissons",
+      "alcolici": "Alcool",
+      "panzerotto_mozzarella_pomodoro": "Panzerotto, mozzarella et tomate",
+      "panzerotto_gorgonzola": "Panzerotto farci de gorgonzola",
+      "panzerotto_cacio_pepe": "Panzerotto cacio e pepe",
+      "panzerotto_braciola": "Panzerotto braciola* - Rôti de viande typique de Bari",
+      "ruota_focaccia": "Roue de focaccia",
+      "cocacola": "Coca-Cola",
+      "acqua": "Eau",
+      "birra": "Bière",
+      "vino": "Vin",
+      "arancino": "Arancino"
+    }
+  },
+  de: {
+    translation: {
+      "footer_text": "Kontaktieren Sie uns: info@bar.com | Telefon: 123-456-7890",
+      "rosticceria": "Snacks",
+      "panzerotti": "Panzerotti",
+      "panzerotti_speciali": "Spezielle Panzerotti",
+      "bevande": "Getränke",
+      "alcolici": "Alkohol",
+      "panzerotto_mozzarella_pomodoro": "Panzerotto, Mozzarella und Tomaten",
+      "panzerotto_gorgonzola": "Panzerotto gefüllt mit Gorgonzola",
+      "panzerotto_cacio_pepe": "Panzerotto cacio e pepe",
+      "panzerotto_braciola": "Panzerotto braciola* - Typisches Bari Fleischgericht",
+      "ruota_focaccia": "Focaccia Rad",
+      "cocacola": "Coca-Cola",
+      "acqua": "Wasser",
+      "birra": "Bier",
+      "vino": "Wein",
+      "arancino": "Arancino"
+    }
+  }
 
    function updateTexts(){
   // Categorie
