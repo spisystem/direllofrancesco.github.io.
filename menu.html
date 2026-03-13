@@ -160,17 +160,19 @@
       overflow: hidden;
       transition: max-height 0.4s ease, opacity 0.3s ease;
     }
-
     .category.closed .products {
-      max-height: 0;
-      opacity: 0;
-      padding-top: 0;
-    }
+  max-height: 0; /* Impostato a 0 inizialmente */
+  opacity: 0;
+  padding-top: 0;
+  transition: max-height 0.4s ease-out, opacity 0.3s ease-out;
+}
 
-    .category.open .products {
-      max-height: 500px;
-      opacity: 1;
-    }
+.category.open .products {
+  max-height: 500px; /* Questo valore deve essere sufficiente per il contenuto */
+  opacity: 1;
+  padding-top: 20px; /* Aggiungi padding per una transizione più fluida */
+  transition: max-height 0.4s ease-in, opacity 0.3s ease-in;
+}
 
     .products { list-style: none; }
 
