@@ -106,35 +106,23 @@
 }
 
 /* Categoria */
+/* Categoria */
 .category {
   background: var(--bg-card);
   margin-bottom: 40px;
-  padding: 35px 40px;
-  border-radius: 18px;
+  padding: 38px 42px; /* Aggiungi un po' di spazio in più */
+  border-radius: 14px; /* Riduci leggermente il border-radius per una gestione migliore */
   border: 1px solid var(--border-soft);
   transition: transform 0.25s ease, box-shadow 0.25s ease;
   opacity: 0;
   transform: translateY(20px);
   animation: fadeInUp 0.6s forwards;
-  box-sizing: border-box; /* Aggiunto per includere i bordi nelle dimensioni totali */
+  box-sizing: border-box; /* Assicurati che il padding e il bordo siano inclusi nelle dimensioni */
 }
 
 .category:hover {
   transform: translateY(-4px);
   box-shadow: 0 25px 50px rgba(0,0,0,0.6);
-}
-
-@keyframes fadeInUp {
-  to { opacity: 1; transform: translateY(0); }
-}
-
-.category h2 {
-  font-family: 'Lora', serif;
-  font-size: 1.8rem;
-  font-weight: 700;
-  margin-bottom: 25px;
-  color: var(--accent);
-  letter-spacing: 1px;
 }
 
 /* Header categoria cliccabile */
@@ -191,7 +179,6 @@
 .products li:last-child { border-bottom: none; }
 
 .products li span:last-child { color: var(--text-main); font-weight: 600; }
-
     /* FOOTER */
     footer {
       border-top: 1px solid var(--border-soft);
