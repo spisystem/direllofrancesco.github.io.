@@ -104,17 +104,21 @@
       padding: 40px 25px 80px;
     }
 
-    .category {
-      background: var(--bg-card);
-      margin-bottom: 40px;
-      padding: 35px 40px;
-      border-radius: 18px;
-      border: 1px solid var(--border-soft);
-      transition: transform 0.25s ease, box-shadow 0.25s ease;
-      opacity: 0;
-      transform: translateY(20px);
-      animation: fadeInUp 0.6s forwards;
-    }
+ .category {
+  background: var(--bg-card);
+  margin-bottom: 30px;
+  padding: 25px 30px;         /* leggermente più interno per i bordi */
+  border-radius: 15px;
+  border: 1.5px solid rgba(255,255,255,0.15); /* più visibile */
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeInUp 0.6s forwards;
+  min-height: 120px;          /* altezza minima uniforme */
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
 
     .category:hover {
       transform: translateY(-4px);
