@@ -269,6 +269,21 @@ footer, #footer-text {
   <!-- Rimosso la scritta "Il tuo menù, in un QR code" -->
   <button class="btn" onclick="window.location.href='menu.html';">Visualizza Menù</button>
 </div>
+
+<!-- CHI SIAMO -->
+<div class="info-section">
+  <div class="info-box" id="about-box">
+    <i class="fas fa-utensils"></i>
+    <h3 id="about-title">Chi siamo</h3>
+    <p id="about-text">
+      Nel cuore di Bari Vecchia, la nostra rosticceria porta in tavola i sapori autentici della tradizione barese. 
+      Ogni giorno prepariamo focacce, panzerotti e specialità locali con ingredienti freschi e lavorazione artigianale, proprio come una volta. 
+      Qui trovi il gusto vero di Bari.
+    </p>
+  </div>
+</div>
+
+<!-- INFO -->
 <div class="info-section">
   <!-- Posizione -->
   <div class="info-box" id="location-box">
@@ -337,7 +352,9 @@ i18next.init({
 "hours_title": "Orari di apertura",
 "hours_text": "Martedì – Domenica<br>19:00 – 01:00<br><br>Chiuso il lunedì",
 "contact_title": "Contatti",
-"contact_text": "Telefono: 334 2732997"
+"contact_text": "Telefono: 334 2732997",
+        "about_title": "Chi siamo",
+    "about_text": "Nel cuore di Bari Vecchia, la nostra rosticceria porta in tavola i sapori autentici della tradizione barese. Ogni giorno prepariamo focacce, panzerotti e specialità locali con ingredienti freschi e lavorazione artigianale, proprio come una volta. Qui trovi il gusto vero di Bari."
     }},
     en:{translation:{
       "menu_button":"View Menu",
@@ -391,6 +408,8 @@ function updateTexts(){
   document.querySelector('#hours-text').innerHTML = i18next.t('hours_text');
   document.querySelector('#contact-title').textContent = i18next.t('contact_title');
   document.querySelector('#contact-text').innerHTML = i18next.t('contact_text');
+  document.querySelector('#about-title').textContent = i18next.t('about_title');
+document.querySelector('#about-text').textContent = i18next.t('about_text');
   
 
   // Flag
