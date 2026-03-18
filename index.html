@@ -259,16 +259,6 @@ footer, #footer-text {
   opacity: 0.7;
 }
 }
-  .info-section {
-  opacity: 0;           /* inizialmente invisibile */
-  transform: translateY(50px); /* parte spostata verso il basso */
-  transition: all 0.8s ease-out;
-}
-
-.info-section.visible {
-  opacity: 1;
-  transform: translateY(0); /* entra in posizione */
-}
 </style>
 </head>
 <body>
@@ -454,22 +444,6 @@ function toggleDropdown(event){
   const dropdown=document.querySelector('.language-dropdown');
   dropdown.style.display=dropdown.style.display==='block'?'none':'block';
 }
-</script>
-<script>
-// Sezioni da animare
-const sections = document.querySelectorAll('.info-section');
-
-// Intersection Observer per farle apparire al passaggio dello scroll
-const observer = new IntersectionObserver((entries, observer) => {
-  entries.forEach(entry => {
-    if(entry.isIntersecting){
-      entry.target.classList.add('visible');
-      observer.unobserve(entry.target); // animazione solo una volta
-    }
-  });
-}, { threshold: 0.2 }); // parte l'animazione quando il 20% della sezione entra in viewport
-
-sections.forEach(section => observer.observe(section));
 </script>
 </body>
 </html>
