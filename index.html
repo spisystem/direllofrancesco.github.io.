@@ -41,6 +41,9 @@ nav .logo img:hover {
 
 .hero {
   height:100vh;
+  background-image:url('images/sfondodirello.JPG');
+  background-size:cover;
+  background-position:center;
   display:flex;
   flex-direction:column;
   justify-content:flex-end;
@@ -49,25 +52,6 @@ nav .logo img:hover {
   position:relative;
   padding-bottom:50px;
   animation: fadeHero 1s ease forwards;
-
-  overflow:hidden; /* IMPORTANTISSIMO */
-}
-  .hero-bg {
-  position:absolute;
-  top:0;
-  left:0;
-  width:100%;
-  height:100%;
-
-  background-size: cover;
-background-position: center;
-  z-index:0;
-
-  transition: opacity 1s ease-in-out;
-}
-
-.hero-bg.overlay {
-  opacity:0;
 }
 
 @keyframes fadeHero {
@@ -96,7 +80,6 @@ background-position: center;
 }
 
 .hero .btn {
-  position: relative;
   background-color: rgba(0,0,0,0.5);
   color:white;
   font-family:'Lora', serif;
@@ -287,8 +270,7 @@ footer, #footer-text {
 </nav>
 
 <div class="hero">
-  <div class="hero-bg"></div>
-  <div class="hero-bg overlay"></div>
+  <!-- Rimosso la scritta "Il tuo menù, in un QR code" -->
   <button class="btn" onclick="window.location.href='menu.html';">Visualizza Menù</button>
 </div>
 
@@ -462,34 +444,6 @@ function toggleDropdown(event){
   const dropdown=document.querySelector('.language-dropdown');
   dropdown.style.display=dropdown.style.display==='block'?'none':'block';
 }
-</script>
-  <script>
-document.addEventListener('DOMContentLoaded', () => {
-  const hero = document.querySelector('.hero');
-
-  // 👇 Le tue immagini
-  const backgrounds = [
-    'images/sfondodirello.JPG',
-    'images/fotoprova.JPG'
-  ];
-
-  let bgIndex = 0;
-
-  // Preload immagini
-  backgrounds.forEach(src => {
-    const img = new Image();
-    img.src = src;
-  });
-
-  // Primo sfondo
-  hero.style.backgroundImage = `url(${backgrounds[0]})`;
-
-  // Slideshow
-  setInterval(() => {
-    bgIndex = (bgIndex + 1) % backgrounds.length;
-    hero.style.backgroundImage = `url(${backgrounds[bgIndex]})`;
-  }, 2500);
-});
 </script>
 </body>
 </html>
