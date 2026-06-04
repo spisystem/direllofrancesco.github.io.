@@ -216,15 +216,12 @@
   margin: 0 20px 15px;
   opacity: 0.7;
 }
-    /* =========================
-   PRODOTTI SEMPLICI ELEGANTI
-   ========================= */
-
+ /* LISTA */
 .products{
   list-style:none;
 }
 
-/* riga prodotto semplice */
+/* RIGA PRODOTTO */
 .product-item{
   display:flex;
   align-items:center;
@@ -233,42 +230,45 @@
   border-bottom:1px solid var(--border-soft);
 }
 
-/* lato sinistro (foto + nome) */
+/* SINISTRA: IMG + NOME */
 .product-left{
   display:flex;
   align-items:center;
   gap:12px;
+  min-width:0;
 }
 
-/* immagine */
+/* IMMAGINE */
 .product-left img{
   width:50px;
   height:50px;
   border-radius:12px;
   object-fit:cover;
+  flex-shrink:0;
   border:1px solid rgba(198,167,94,0.3);
 }
 
-/* nome + prezzo stessa linea */
-.product-text{
-  display:flex;
-  align-items:center;
-  gap:10px;
-}
-
-/* nome */
+/* NOME */
 .product-name{
   font-family:'Poppins', sans-serif;
   font-size:1rem;
   color:var(--text-main);
-  font-weight:500;
+
+  /* IMPORTANTISSIMO: evita rotture brutte */
+  white-space:nowrap;
+  overflow:hidden;
+  text-overflow:ellipsis;
 }
 
-/* prezzo */
+/* PREZZO SEMPRE ALLINEATO */
 .product-price{
   font-family:'Poppins', sans-serif;
   color:var(--accent);
   font-weight:700;
+
+  /* colonna fissa perfetta */
+  min-width:70px;
+  text-align:right;
   white-space:nowrap;
 }
   </style>
@@ -302,12 +302,10 @@
     <li class="product-item">
   <div class="product-left">
     <img src="images/arancino.JPG" alt="Arancino">
-
-    <div class="product-text">
-      <span class="product-name" data-key="arancino">Arancino</span>
-      <span class="product-price">€2.00</span>
-    </div>
+    <span class="product-name" data-key="arancino">Arancino</span>
   </div>
+
+  <span class="product-price">€2.00</span>
 </li>
   </ul>
 </div>
