@@ -216,19 +216,55 @@
   margin: 0 20px 15px;
   opacity: 0.7;
 }
+/* =========================
+   PRODUCTS - LAYOUT PREMIUM
+   ========================= */
+
+.products{
+  list-style:none;
+  display:flex;
+  flex-direction:column;
+  gap:12px;
+}
+
+/* CARD PRODOTTO */
 .product-item{
   display:flex;
-  justify-content:space-between;
+  gap:14px;
   align-items:center;
-  padding:14px 0;
-  border-bottom:1px solid var(--border-soft);
-  transition:0.3s ease;
+  padding:12px 12px;
+  border-radius:16px;
+  background:rgba(255,255,255,0.03);
+  border:1px solid rgba(255,255,255,0.06);
+  backdrop-filter: blur(10px);
+  transition:all 0.25s ease;
+  cursor:pointer;
+  position:relative;
+  overflow:hidden;
 }
 
+/* hover elegante */
 .product-item:hover{
-  transform:translateY(-2px);
+  transform:translateY(-4px);
+  border:1px solid rgba(198,167,94,0.35);
+  box-shadow:0 18px 40px rgba(0,0,0,0.6);
 }
 
+/* glow soft dorato */
+.product-item::before{
+  content:"";
+  position:absolute;
+  inset:-50%;
+  background:radial-gradient(circle, rgba(198,167,94,0.08), transparent 60%);
+  opacity:0;
+  transition:0.4s ease;
+}
+
+.product-item:hover::before{
+  opacity:1;
+}
+
+/* IMMAGINE */
 .product-left{
   display:flex;
   align-items:center;
@@ -236,9 +272,9 @@
 }
 
 .product-left img{
-  width:58px;              /* 👈 più grande e premium */
-  height:58px;
-  border-radius:16px;      /* meno tondo, più moderno */
+  width:64px;
+  height:64px;
+  border-radius:18px;
   object-fit:cover;
   border:1px solid rgba(198,167,94,0.35);
   box-shadow:0 10px 25px rgba(0,0,0,0.45);
@@ -246,26 +282,45 @@
 }
 
 .product-item:hover .product-left img{
-  transform:scale(1.05);
-  box-shadow:0 15px 35px rgba(0,0,0,0.6);
+  transform:scale(1.07);
+  box-shadow:0 18px 35px rgba(0,0,0,0.6);
 }
 
-.product-info{
+/* BODY */
+.product-body{
+  flex:1;
   display:flex;
-  flex-direction:column;
+  align-items:center;
 }
 
+/* riga unica nome + prezzo */
+.product-row{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  width:100%;
+  gap:12px;
+}
+
+/* NOME */
 .product-name{
   font-size:1.05rem;
-  color:var(--text-main);
   font-weight:500;
+  color:var(--text-main);
   letter-spacing:0.2px;
 }
 
+/* PREZZO */
 .product-price{
   color:var(--accent);
   font-weight:700;
   font-size:1rem;
+  white-space:nowrap;
+}
+
+/* click feedback */
+.product-item:active{
+  transform:scale(0.98);
 }
   </style>
 </head>
@@ -295,14 +350,17 @@
   </div>
   <ul class="products" id="rosticceria-products">
     <li><span data-key="ruota_focaccia">Ruota Focaccia</span><span>€5.00</span></li> <!-- Modificato il panzerotto con la ruota focaccia -->
- <li class="product-item">
-  <div class="product-left">
-    <img src="images/arancino.JPG" alt="Arancino">
-    <div class="product-info">
+ <li class="product-card">
+  <div class="product-media">
+    <img src="images/arancino.jpg" alt="Arancino">
+  </div>
+
+  <div class="product-body">
+    <div class="product-row">
       <span class="product-name" data-key="arancino">Arancino</span>
+      <span class="product-price">€2.00</span>
     </div>
   </div>
-  <span class="product-price">€2.00</span>
 </li>
   </ul>
 </div>
