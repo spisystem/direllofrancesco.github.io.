@@ -220,16 +220,22 @@
   list-style:none;
 }
 
-/* ITEM PRODOTTO (UNICO STANDARD PER TUTTI) */
-.products li,
+ /* LISTA */.products{
+  list-style:none;
+}
+
+/* BLOCCA QUALSIASI COMPORTAMENTO STRANO */
 .product-item{
   display:flex !important;
+  flex-direction:row !important;
+  align-items:center;
   justify-content:space-between;
-  align-items:center; /* 🔥 FIX ALLINEAMENTO VERTICALE PERFETTO */
+
   width:100%;
   padding:12px 0;
   border-bottom:1px solid var(--border-soft);
   gap:12px;
+  flex-wrap:nowrap; /* IMPORTANTISSIMO */
 }
 
 /* PARTE SINISTRA */
@@ -251,8 +257,7 @@
 }
 
 /* NOME */
-.product-name,
-.products li span:first-child{
+.product-name{
   font-family:'Poppins', sans-serif;
   font-size:1rem;
   color:var(--text-main);
@@ -263,9 +268,8 @@
   min-width:0;
 }
 
-/* PREZZO */
-.product-price,
-.products li span:last-child{
+/* PREZZO BLOCCATO A DESTRA */
+.product-price{
   flex-shrink:0;
   white-space:nowrap;
   min-width:70px;
@@ -273,7 +277,6 @@
 
   color:var(--accent);
   font-weight:700;
-  line-height:1; /* 🔥 FIX SALTI VERTICALI */
 }
   </style>
 </head>
