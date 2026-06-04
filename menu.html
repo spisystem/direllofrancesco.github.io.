@@ -261,11 +261,26 @@
   font-family:'Poppins', sans-serif;
   font-size:1rem;
   color:var(--text-main);
-
-  white-space:nowrap;
-  overflow:hidden;
-  text-overflow:ellipsis;
   min-width:0;
+}
+
+/* DESKTOP: resta compatto su una riga */
+@media (min-width: 769px){
+  .product-name{
+    white-space:nowrap;
+    overflow:hidden;
+    text-overflow:ellipsis;
+  }
+}
+
+/* MOBILE: mostra tutto */
+@media (max-width: 768px){
+  .product-name{
+    white-space:normal;
+    overflow:visible;
+    text-overflow:unset;
+    line-height:1.3;
+  }
 }
 
 /* PREZZO BLOCCATO A DESTRA */
