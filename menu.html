@@ -216,6 +216,61 @@
   margin: 0 20px 15px;
   opacity: 0.7;
 }
+    /* =========================
+   PRODOTTI SEMPLICI ELEGANTI
+   ========================= */
+
+.products{
+  list-style:none;
+}
+
+/* riga prodotto semplice */
+.product-item{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  padding:12px 0;
+  border-bottom:1px solid var(--border-soft);
+}
+
+/* lato sinistro (foto + nome) */
+.product-left{
+  display:flex;
+  align-items:center;
+  gap:12px;
+}
+
+/* immagine */
+.product-left img{
+  width:50px;
+  height:50px;
+  border-radius:12px;
+  object-fit:cover;
+  border:1px solid rgba(198,167,94,0.3);
+}
+
+/* nome + prezzo stessa linea */
+.product-text{
+  display:flex;
+  align-items:center;
+  gap:10px;
+}
+
+/* nome */
+.product-name{
+  font-family:'Poppins', sans-serif;
+  font-size:1rem;
+  color:var(--text-main);
+  font-weight:500;
+}
+
+/* prezzo */
+.product-price{
+  font-family:'Poppins', sans-serif;
+  color:var(--accent);
+  font-weight:700;
+  white-space:nowrap;
+}
   </style>
 </head>
 <body>
@@ -244,7 +299,16 @@
   </div>
   <ul class="products" id="rosticceria-products">
     <li><span data-key="ruota_focaccia">Ruota Focaccia</span><span>€5.00</span></li> <!-- Modificato il panzerotto con la ruota focaccia -->
-    <li><span data-key="arancino">Arancino</span><span>€2.00</span></li>
+    <li class="product-item">
+  <div class="product-left">
+    <img src="images/arancino.JPG" alt="Arancino">
+
+    <div class="product-text">
+      <span class="product-name" data-key="arancino">Arancino</span>
+      <span class="product-price">€2.00</span>
+    </div>
+  </div>
+</li>
   </ul>
 </div>
 
