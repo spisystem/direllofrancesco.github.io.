@@ -220,23 +220,27 @@
   list-style:none;
 }
 
-/* RIGA PRODOTTO */
+/* BLOCCA QUALSIASI COMPORTAMENTO STRANO */
 .product-item{
-  display:flex;
+  display:flex !important;
+  flex-direction:row !important;
   align-items:center;
   justify-content:space-between;
+
+  width:100%;
   padding:12px 0;
   border-bottom:1px solid var(--border-soft);
   gap:12px;
+  flex-wrap:nowrap; /* IMPORTANTISSIMO */
 }
 
-/* BLOCCO SINISTRO (IMG + NOME) */
+/* PARTE SINISTRA */
 .product-left{
   display:flex;
   align-items:center;
   gap:12px;
   flex:1;
-  min-width:0; /* fondamentale */
+  min-width:0;
 }
 
 /* IMMAGINE */
@@ -246,7 +250,6 @@
   border-radius:12px;
   object-fit:cover;
   flex-shrink:0;
-  border:1px solid rgba(198,167,94,0.3);
 }
 
 /* NOME */
@@ -255,23 +258,21 @@
   font-size:1rem;
   color:var(--text-main);
 
-  /* evita che spinga il prezzo sotto */
-  min-width:0;
   white-space:nowrap;
   overflow:hidden;
   text-overflow:ellipsis;
+  min-width:0;
 }
 
-/* PREZZO SEMPRE BLOCCATO A DESTRA */
+/* PREZZO BLOCCATO A DESTRA */
 .product-price{
-  font-family:'Poppins', sans-serif;
-  color:var(--accent);
-  font-weight:700;
-
   flex-shrink:0;
+  white-space:nowrap;
   min-width:70px;
   text-align:right;
-  white-space:nowrap;
+
+  color:var(--accent);
+  font-weight:700;
 }
   </style>
 </head>
@@ -303,8 +304,8 @@
     <li><span data-key="ruota_focaccia">Ruota Focaccia</span><span>€5.00</span></li> <!-- Modificato il panzerotto con la ruota focaccia -->
     <li class="product-item">
   <div class="product-left">
-    <img src="images/arancino.JPG" alt="Arancino">
-    <span class="product-name" data-key="arancino">Arancino</span>
+    <img src="images/arancino.JPG">
+    <span class="product-name">Arancino</span>
   </div>
 
   <span class="product-price">€2.00</span>
