@@ -228,11 +228,28 @@
 .product-item:hover{
   transform:translateY(-2px);
 }
-
 .product-left{
   display:flex;
   align-items:center;
-  gap:14px;
+  flex-shrink:0;
+}
+    .product-body{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  flex:1;
+  width:100%;
+}
+
+/* forza nome e prezzo sulla stessa riga */
+.product-name{
+  flex:1;
+  white-space:nowrap;
+}
+
+.product-price{
+  white-space:nowrap;
+  margin-left:12px;
 }
 
 .product-left img{
