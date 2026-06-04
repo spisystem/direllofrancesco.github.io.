@@ -216,81 +216,13 @@
   margin: 0 20px 15px;
   opacity: 0.7;
 }
-.product-item{
-  display:flex;
-  justify-content:space-between;
-  align-items:center;
-  padding:14px 0;
-  border-bottom:1px solid var(--border-soft);
-  transition:0.3s ease;
-}
-
-.product-item:hover{
-  transform:translateY(-2px);
-}
-.product-left{
-  display:flex;
-  align-items:center;
-  flex-shrink:0;
-}
-    .product-body{
-  display:flex;
-  align-items:center;
-  justify-content:space-between;
-  flex:1;
-  width:100%;
-}
-
-/* forza nome e prezzo sulla stessa riga */
-.product-name{
-  flex:1;
-  white-space:nowrap;
-}
-
-.product-price{
-  white-space:nowrap;
-  margin-left:12px;
-}
-
-.product-left img{
-  width:58px;              /* 👈 più grande e premium */
-  height:58px;
-  border-radius:16px;      /* meno tondo, più moderno */
-  object-fit:cover;
-  border:1px solid rgba(198,167,94,0.35);
-  box-shadow:0 10px 25px rgba(0,0,0,0.45);
-  transition:0.3s ease;
-}
-
-.product-item:hover .product-left img{
-  transform:scale(1.05);
-  box-shadow:0 15px 35px rgba(0,0,0,0.6);
-}
-
-.product-info{
-  display:flex;
-  flex-direction:column;
-}
-
-.product-name{
-  font-size:1.05rem;
-  color:var(--text-main);
-  font-weight:500;
-  letter-spacing:0.2px;
-}
-
-.product-price{
-  color:var(--accent);
-  font-weight:700;
-  font-size:1rem;
-}
   </style>
 </head>
 <body>
 
   <nav>
     <div class="logo">
-      <img src="images/logospi1.PNG" alt="Logo">
+      <img src="images/E7FAAD49-2107-44FF-8C7F-167C8E1D017F.png" alt="Logo">
     </div>
     <div class="language-selector" onclick="toggleDropdown()">
       <span>🇮🇹</span>
@@ -312,15 +244,7 @@
   </div>
   <ul class="products" id="rosticceria-products">
     <li><span data-key="ruota_focaccia">Ruota Focaccia</span><span>€5.00</span></li> <!-- Modificato il panzerotto con la ruota focaccia -->
- <li class="product-item">
-  <div class="product-left">
-    <img src="images/arancino.JPG" alt="Arancino">
-    <div class="product-info">
-      <span class="product-name" data-key="arancino">Arancino</span>
-    </div>
-  </div>
-  <span class="product-price">€2.00</span>
-</li>
+    <li><span data-key="arancino">Arancino</span><span>€2.00</span></li>
   </ul>
 </div>
 
@@ -493,7 +417,6 @@
   document.querySelector('#panzerotti_speciali-title').textContent = i18next.t('panzerotti_speciali'); // Corretto
   document.querySelector('#bevande-title').textContent = i18next.t('bevande');
   document.querySelector('#alcolici-title').textContent = i18next.t('alcolici');
-
 
       // Prodotti
       document.querySelectorAll('[data-key]').forEach(el=>{
