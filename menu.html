@@ -216,32 +216,56 @@
   margin: 0 20px 15px;
   opacity: 0.7;
 }
-    .product-item{
+.product-item{
   display:flex;
   justify-content:space-between;
   align-items:center;
-  padding:12px 0;
+  padding:14px 0;
   border-bottom:1px solid var(--border-soft);
+  transition:0.3s ease;
+}
+
+.product-item:hover{
+  transform:translateY(-2px);
 }
 
 .product-left{
   display:flex;
   align-items:center;
-  gap:12px;
+  gap:14px;
 }
 
 .product-left img{
-  width:38px;
-  height:38px;
-  border-radius:50%;
+  width:58px;              /* 👈 più grande e premium */
+  height:58px;
+  border-radius:16px;      /* meno tondo, più moderno */
   object-fit:cover;
-  border:1px solid rgba(198,167,94,0.4);
-  box-shadow:0 6px 15px rgba(0,0,0,0.4);
+  border:1px solid rgba(198,167,94,0.35);
+  box-shadow:0 10px 25px rgba(0,0,0,0.45);
+  transition:0.3s ease;
 }
 
-.product-item span:last-child{
+.product-item:hover .product-left img{
+  transform:scale(1.05);
+  box-shadow:0 15px 35px rgba(0,0,0,0.6);
+}
+
+.product-info{
+  display:flex;
+  flex-direction:column;
+}
+
+.product-name{
+  font-size:1.05rem;
   color:var(--text-main);
-  font-weight:600;
+  font-weight:500;
+  letter-spacing:0.2px;
+}
+
+.product-price{
+  color:var(--accent);
+  font-weight:700;
+  font-size:1rem;
 }
   </style>
 </head>
@@ -271,12 +295,14 @@
   </div>
   <ul class="products" id="rosticceria-products">
     <li><span data-key="ruota_focaccia">Ruota Focaccia</span><span>€5.00</span></li> <!-- Modificato il panzerotto con la ruota focaccia -->
-    <li class="product-item">
+ <li class="product-item">
   <div class="product-left">
-    <img src="images/arancino.JPG" alt="Arancino">
-    <span data-key="arancino">Arancino</span>
+    <img src="images/arancino.jpg" alt="Arancino">
+    <div class="product-info">
+      <span class="product-name" data-key="arancino">Arancino</span>
+    </div>
   </div>
-  <span>€2.00</span>
+  <span class="product-price">€2.00</span>
 </li>
   </ul>
 </div>
