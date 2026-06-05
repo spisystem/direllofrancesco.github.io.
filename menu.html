@@ -398,9 +398,7 @@
 </li> 
     <li class="product-item">
   <div class="product-left">
- <img src="images/arancino.JPG"
-     onclick="openImageModal(this.src)"
-     loading="lazy">
+ <img src="images/arancino.JPG">
     <span class="product-name">Arancino</span>
   </div>
 
@@ -700,6 +698,11 @@ document.addEventListener("keydown", function(e){
   if(e.key === "Escape"){
     closeImageModal();
   }
+});
+    document.querySelectorAll('.product-left img').forEach(img => {
+  img.addEventListener('click', () => {
+    openImageModal(img.src);
+  });
 });
   </script>
 <div id="imageModal" class="image-modal">
