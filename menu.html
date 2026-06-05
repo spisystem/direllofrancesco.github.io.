@@ -293,6 +293,74 @@
   color:var(--accent);
   font-weight:700;
 }
+    /* LIGHTBOX MODERNA */
+.image-modal{
+  position:fixed;
+  inset:0;
+  background:rgba(0,0,0,0.92);
+
+  display:flex;
+  justify-content:center;
+  align-items:center;
+
+  opacity:0;
+  visibility:hidden;
+
+  transition:all .25s ease;
+  z-index:9999;
+
+  backdrop-filter:blur(8px);
+}
+
+.image-modal.active{
+  opacity:1;
+  visibility:visible;
+}
+
+.modal-image{
+  max-width:92%;
+  max-height:88vh;
+
+  border-radius:18px;
+
+  transform:scale(.85);
+  transition:transform .25s ease;
+
+  box-shadow:
+    0 20px 60px rgba(0,0,0,.6),
+    0 0 0 1px rgba(255,255,255,.08);
+}
+
+.image-modal.active .modal-image{
+  transform:scale(1);
+}
+
+.close-modal{
+  position:absolute;
+  top:25px;
+  right:30px;
+
+  font-size:42px;
+  color:white;
+  cursor:pointer;
+
+  transition:.2s;
+}
+
+.close-modal:hover{
+  transform:scale(1.1);
+  opacity:.8;
+}
+
+/* CURSORE IMMAGINI */
+.product-left img{
+  cursor:pointer;
+  transition:transform .25s ease;
+}
+
+.product-left img:hover{
+  transform:scale(1.06);
+}
   </style>
 </head>
 <body>
@@ -330,7 +398,9 @@
 </li> 
     <li class="product-item">
   <div class="product-left">
-    <img src="images/arancino.JPG">
+ <img src="images/arancino.JPG"
+     onclick="openImageModal(this.src)"
+     loading="lazy">
     <span class="product-name">Arancino</span>
   </div>
 
@@ -609,7 +679,32 @@
         category.classList.add('open');
       }
     }
-  </script>
+    function openImageModal(src){
+  document.getElementById("modalImage").src = src;
+  document.getElementById("imageModal").classList.add("active");
+}
 
+function closeImageModal(){
+  document.getElementById("imageModal").classList.remove("active");
+}
+
+document.addEventListener("click", function(e){
+  const modal = document.getElementById("imageModal");
+
+  if(e.target === modal){
+    closeImageModal();
+  }
+});
+
+document.addEventListener("keydown", function(e){
+  if(e.key === "Escape"){
+    closeImageModal();
+  }
+});
+  </script>
+<div id="imageModal" class="image-modal">
+  <span class="close-modal" onclick="closeImageModal()">&times;</span>
+  <img id="modalImage" class="modal-image" src="" alt="">
+</div>
 </body>
 </html>
