@@ -504,7 +504,7 @@ onclick="openProductModal(
 'ruota_focaccia_desc',
 'ruota_focaccia_allergens',
 '€5.00'
-)"
+)">
     <span class="product-name" data-key="ruota_focaccia">Ruota di focaccia</span>
   </div>
 
@@ -666,7 +666,8 @@ onclick="openProductModal(
       "vino": "Vino",
       "arancino": "Arancino",
      "ruota_focaccia_desc":"Focaccia barese con pomodoro, olive e olio extravergine.",
-     "ruota_focaccia_allergens":"Glutine"
+     "ruota_focaccia_allergens":"Glutine",
+          "allergens_label": "Allergeni"
     }},
   en: {
     translation: {
@@ -688,7 +689,8 @@ onclick="openProductModal(
       "arancino": "Arancino",
       "ruota_focaccia_desc":"Bari-style focaccia with tomato, olives and extra virgin olive oil.",
 
-    "ruota_focaccia_allergens":"Gluten"
+    "ruota_focaccia_allergens":"Gluten",
+      "allergens_label": "Allergens"
     }
   },
   es: {
@@ -710,7 +712,8 @@ onclick="openProductModal(
       "vino": "Vino",
       "arancino": "Arancino",
       "ruota_focaccia_desc": "Focaccia típica de Bari con tomate, aceitunas y aceite de oliva virgen extra.",
-      "ruota_focaccia_allergens": "Gluten"
+      "ruota_focaccia_allergens": "Gluten",
+     "allergens_label": "Alérgenos"
     }
   },
   fr: {
@@ -732,7 +735,8 @@ onclick="openProductModal(
       "vino": "Vin",
       "arancino": "Arancino",
       "ruota_focaccia_desc": "Focaccia typique de Bari avec tomate, olives et huile d'olive extra vierge.",
-      "ruota_focaccia_allergens": "Gluten"
+      "ruota_focaccia_allergens": "Gluten",
+      "allergens_label": "Allergènes"
     }
   },
   de: {
@@ -754,7 +758,8 @@ onclick="openProductModal(
       "vino": "Wein",
       "arancino": "Arancino",
       "ruota_focaccia_desc": "Focaccia nach Bari-Art mit Tomaten, Oliven und nativem Olivenöl extra.",
-      "ruota_focaccia_allergens": "Gluten"
+      "ruota_focaccia_allergens": "Gluten",
+      "allergens_label": "Allergene"
     }}
   }
     });
@@ -822,8 +827,7 @@ document.getElementById("modalDescription").textContent =
   i18next.t(descKey);
 
 document.getElementById("modalAllergens").textContent =
-  "Allergeni: " + i18next.t(allergenKey);
-
+  i18next.t("allergens_label") + ": " + i18next.t(allergenKey);
 document.getElementById("modalPrice").textContent =
   price;
 
