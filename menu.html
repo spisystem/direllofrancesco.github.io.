@@ -468,6 +468,34 @@
   font-weight:700;
   color:var(--accent);
 }
+   .info-icon{
+  width:28px;
+  height:28px;
+
+  min-width:28px;
+
+  border-radius:50%;
+  border:1px solid var(--accent);
+
+  display:flex;
+  align-items:center;
+  justify-content:center;
+
+  color:var(--accent);
+  font-size:14px;
+  font-weight:600;
+
+  cursor:pointer;
+
+  transition:all .25s ease;
+}
+
+.info-icon:hover{
+  background:var(--accent);
+  color:#111;
+
+  transform:scale(1.08);
+} 
   </style>
 </head>
 <body>
@@ -496,20 +524,29 @@
   </div>
   <ul class="products" id="rosticceria-products">
      <li class="product-item">
+
   <div class="product-left">
-   <img src="images/focaccia.JPG"
-onclick="openProductModal(
-'images/focaccia.JPG',
-'ruota_focaccia',
-'ruota_focaccia_desc',
-'ruota_focaccia_allergens',
-'€5.00'
-)">
-    <span class="product-name" data-key="ruota_focaccia">Ruota di focaccia</span>
+    <img src="images/focaccia.JPG">
+
+    <span class="product-name" data-key="ruota_focaccia">
+      Ruota di focaccia
+    </span>
+
+  <div class="info-icon"
+     onclick="openProductModal(
+       'images/focaccia.JPG',
+       'ruota_focaccia',
+       'ruota_focaccia_desc',
+       'ruota_focaccia_allergens',
+       '€5.00'
+     )">
+  ⓘ
+</div>
   </div>
 
   <span class="product-price">€5.00</span>
-</li> 
+
+</li>
     <li class="product-item">
   <div class="product-left">
  <img src="images/arancino.JPG">
