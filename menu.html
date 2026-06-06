@@ -500,11 +500,11 @@
    <img src="images/focaccia.JPG"
 onclick="openProductModal(
 'images/focaccia.JPG',
-'Ruota di focaccia',
-'Focaccia barese con pomodoro, olive e olio extravergine.',
-'Glutine',
+'ruota_focaccia',
+'ruota_focaccia_desc',
+'ruota_focaccia_allergens',
 '€5.00'
-)">
+)"
     <span class="product-name" data-key="ruota_focaccia">Ruota di focaccia</span>
   </div>
 
@@ -664,7 +664,9 @@ onclick="openProductModal(
       "acqua": "Acqua",
       "birra": "Birra",
       "vino": "Vino",
-      "arancino": "Arancino"
+      "arancino": "Arancino",
+     "ruota_focaccia_desc":"Focaccia barese con pomodoro, olive e olio extravergine.",
+     "ruota_focaccia_allergens":"Glutine"
     }},
   en: {
     translation: {
@@ -683,7 +685,10 @@ onclick="openProductModal(
       "acqua": "Water",
       "birra": "Beer",
       "vino": "Wine",
-      "arancino": "Arancino"
+      "arancino": "Arancino",
+      "ruota_focaccia_desc":"Bari-style focaccia with tomato, olives and extra virgin olive oil.",
+
+    "ruota_focaccia_allergens":"Gluten"
     }
   },
   es: {
@@ -703,7 +708,9 @@ onclick="openProductModal(
       "acqua": "Agua",
       "birra": "Cerveza",
       "vino": "Vino",
-      "arancino": "Arancino"
+      "arancino": "Arancino",
+      "ruota_focaccia_desc": "Focaccia típica de Bari con tomate, aceitunas y aceite de oliva virgen extra.",
+      "ruota_focaccia_allergens": "Gluten"
     }
   },
   fr: {
@@ -723,7 +730,9 @@ onclick="openProductModal(
       "acqua": "Eau",
       "birra": "Bière",
       "vino": "Vin",
-      "arancino": "Arancino"
+      "arancino": "Arancino",
+      "ruota_focaccia_desc": "Focaccia typique de Bari avec tomate, olives et huile d'olive extra vierge.",
+      "ruota_focaccia_allergens": "Gluten"
     }
   },
   de: {
@@ -743,7 +752,9 @@ onclick="openProductModal(
       "acqua": "Wasser",
       "birra": "Bier",
       "vino": "Wein",
-      "arancino": "Arancino"
+      "arancino": "Arancino",
+      "ruota_focaccia_desc": "Focaccia nach Bari-Art mit Tomaten, Oliven und nativem Olivenöl extra.",
+      "ruota_focaccia_allergens": "Gluten"
     }}
   }
     });
@@ -800,19 +811,21 @@ onclick="openProductModal(
         category.classList.add('open');
       }
     }
-    function openProductModal(src, title, description, allergens, price){
+    function openProductModal(src, titleKey, descKey, allergenKey, price){
 
   document.getElementById("modalImage").src = src;
 
-  document.getElementById("modalTitle").textContent = title;
+  document.getElementById("modalTitle").textContent =
+  i18next.t(titleKey);
 
-  document.getElementById("modalDescription").textContent = description;
+document.getElementById("modalDescription").textContent =
+  i18next.t(descKey);
 
-  document.getElementById("modalAllergens").textContent =
-    "Allergeni: " + allergens;
+document.getElementById("modalAllergens").textContent =
+  "Allergeni: " + i18next.t(allergenKey);
 
-  document.getElementById("modalPrice").textContent =
-    price;
+document.getElementById("modalPrice").textContent =
+  price;
 
   document.getElementById("imageModal").classList.add("active");
 }
@@ -834,11 +847,7 @@ document.addEventListener("keydown", function(e){
     closeImageModal();
   }
 });
-    document.querySelectorAll('.product-left img').forEach(img => {
-  img.addEventListener('click', () => {
-    openImageModal(img.src);
-  });
-});
+    
    /* BOTTONE TORNA SU */
 const scrollTopBtn = document.getElementById("scrollTopBtn");
 
