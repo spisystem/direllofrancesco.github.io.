@@ -427,6 +427,47 @@
     bottom:20px;
   }
 }
+    .product-modal-card{
+  max-width:500px;
+  width:92%;
+
+  background:#1a1a1a;
+
+  border:1px solid rgba(255,255,255,.08);
+
+  border-radius:20px;
+
+  padding:24px;
+
+  text-align:center;
+
+  box-shadow:0 20px 60px rgba(0,0,0,.6);
+}
+
+#modalTitle{
+  margin-top:18px;
+  color:var(--accent);
+  font-size:1.5rem;
+}
+
+#modalDescription{
+  margin-top:12px;
+  color:var(--text-soft);
+  line-height:1.6;
+}
+
+#modalAllergens{
+  margin-top:15px;
+  color:#d9d9d9;
+  font-size:.95rem;
+}
+
+#modalPrice{
+  margin-top:18px;
+  font-size:1.3rem;
+  font-weight:700;
+  color:var(--accent);
+}
   </style>
 </head>
 <body>
@@ -456,7 +497,14 @@
   <ul class="products" id="rosticceria-products">
      <li class="product-item">
   <div class="product-left">
-    <img src="images/focaccia.JPG">
+   <img src="images/focaccia.JPG"
+onclick="openProductModal(
+'images/focaccia.JPG',
+'Ruota di focaccia',
+'Focaccia barese con pomodoro, olive e olio extravergine.',
+'Glutine',
+'€5.00'
+)">
     <span class="product-name" data-key="ruota_focaccia">Ruota di focaccia</span>
   </div>
 
@@ -752,8 +800,20 @@
         category.classList.add('open');
       }
     }
-    function openImageModal(src){
+    function openProductModal(src, title, description, allergens, price){
+
   document.getElementById("modalImage").src = src;
+
+  document.getElementById("modalTitle").textContent = title;
+
+  document.getElementById("modalDescription").textContent = description;
+
+  document.getElementById("modalAllergens").textContent =
+    "Allergeni: " + allergens;
+
+  document.getElementById("modalPrice").textContent =
+    price;
+
   document.getElementById("imageModal").classList.add("active");
 }
 
@@ -798,8 +858,27 @@ scrollTopBtn.addEventListener("click", () => {
 }); 
   </script>
 <div id="imageModal" class="image-modal">
-  <span class="close-modal" onclick="closeImageModal()">&times;</span>
-  <img id="modalImage" class="modal-image" src="" alt="">
+
+  <span class="close-modal"
+        onclick="closeImageModal()">&times;</span>
+
+  <div class="product-modal-card">
+
+    <img id="modalImage"
+         class="modal-image"
+         src=""
+         alt="">
+
+    <h2 id="modalTitle"></h2>
+
+    <p id="modalDescription"></p>
+
+    <p id="modalAllergens"></p>
+
+    <div id="modalPrice"></div>
+
+  </div>
+
 </div>
 
 </body>
