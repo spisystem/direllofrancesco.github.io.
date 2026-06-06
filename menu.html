@@ -523,28 +523,35 @@
     <span class="category-toggle">⌄</span>
   </div>
   <ul class="products" id="rosticceria-products">
-     <li class="product-item">
-
+  <li class="product-item" onclick="openProductModal(
+  'images/focaccia.JPG',
+  'ruota_focaccia',
+  'ruota_focaccia_desc',
+  'ruota_focaccia_allergens',
+  '€5.00'
+)">
+  
   <div class="product-left">
     <img src="images/focaccia.JPG">
 
     <span class="product-name" data-key="ruota_focaccia">
       Ruota di focaccia
     </span>
-
-  <div class="info-icon"
-     onclick="openProductModal(
-       'images/focaccia.JPG',
-       'ruota_focaccia',
-       'ruota_focaccia_desc',
-       'ruota_focaccia_allergens',
-       '€5.00'
-     )">
-  ⓘ
-</div>
   </div>
 
-  <span class="product-price">€5.00</span>
+  <div class="product-right">
+    <div class="info-icon" onclick="event.stopPropagation(); openProductModal(
+      'images/focaccia.JPG',
+      'ruota_focaccia',
+      'ruota_focaccia_desc',
+      'ruota_focaccia_allergens',
+      '€5.00'
+    )">
+      ⓘ
+    </div>
+
+    <span class="product-price">€5.00</span>
+  </div>
 
 </li>
     <li class="product-item">
