@@ -491,6 +491,23 @@
   color:#111;
   transform:scale(1.05);
 }
+   .product-name-wrapper{
+  display:flex;
+  align-items:center;
+  gap:8px;
+}
+
+.info-icon{
+  font-size:16px;
+  color:var(--accent);
+  cursor:pointer;
+  transition:transform .2s ease, opacity .2s ease;
+}
+
+.info-icon:hover{
+  transform:scale(1.2);
+  opacity:0.8;
+} 
   </style>
 </head>
 <body>
@@ -529,10 +546,22 @@
   <div class="product-left">
     <img src="images/focaccia.JPG">
 
-    <span class="product-name" data-key="ruota_focaccia">
-      Ruota di focaccia
-    </span>
-  </div>
+    <div class="product-name-wrapper">
+  <span class="product-name" data-key="ruota_focaccia">
+    Ruota di focaccia
+  </span>
+
+  <span class="info-icon"
+        onclick="event.stopPropagation(); openProductModal(
+          'images/focaccia.JPG',
+          'ruota_focaccia',
+          'ruota_focaccia_desc',
+          'ruota_focaccia_allergens',
+          '€5.00'
+        )">
+    ⓘ
+  </span>
+</div>
 
   <div class="product-right">
     <div class="info-icon" onclick="event.stopPropagation(); openProductModal(
